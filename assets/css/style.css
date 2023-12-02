@@ -11,10 +11,15 @@
 
 :root {
     --fonte-padrão: 'Roboto', sans-serif;
-    --cor-blocos: #1A1A20;
+    --cor-blocos: #353434;
+    --cor-risco: rgb(39, 36, 36);
 }
 
-/* Estilos para o menu */
+body {
+  background-color: black;
+  color: white;
+}
+
 .mobile-nav {
     width: 100vw;
     height: 7vh;
@@ -22,86 +27,142 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-y: hidden;
+    border-bottom: 1px solid rgb(39, 36, 36);
   }
   
-  .menu-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column; /* Alterando para exibir os itens verticalmente */
-    position: absolute;
-    top: 7vh;
-    right: 20px;
-    background-color: #333;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 1;
-    display: none; /* Inicialmente oculto */
-  }
-  
-  .menu-list.active {
-    display: flex; /* Exibir quando a classe active estiver presente */
-  }
-  
-  .menu-list li {
-    display: block;
-  }
-  
-  .menu-list a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    padding: 10px;
-  }
-  
-  #hamburger-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 20px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    margin-right: 30px;
-  }
-  
-  #hamburger-btn span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #fff;
-    transition: all 0.3s ease;
-  }
-  
-  /* Estilos para animar o ícone do menu hamburguer */
-  #hamburger-btn.active span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  #hamburger-btn.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  
-  #hamburger-btn.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-  
-  /* Estilos para o menu quando aberto */
-  .menu-open {
-    display: block;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 7vh;
+  right: 20px;
+  background-color: #333;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  display: none; 
+}
 
+.menu-list.active {
+  display: flex;
+}
+
+.menu-list li {
+  display: block;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+}
+
+#hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 30px;
+  overflow-y: hidden;
+}
+
+#hamburger-btn span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+#hamburger-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger-btn.active span:nth-child(1) {
+  transform: translateY(8px) rotate(50deg);
+}
+
+#hamburger-btn.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-50deg);
+}
+
+.menu-open {
+  display: block;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+span, li{
+  overflow-y: hidden;
+}
 
 nav > div:nth-child(1n) > img {
     width: 100px;
     margin-right: 50px;
+    margin-top: 5px;
+}
+
+nav > ul > li:nth-child(1) > a > span {
+  padding-top: 5px;
+  padding-right: 3px;
+  position: relative;
+  top: 3px;
+}
+
+nav > ul > li:nth-child(2) > a > span {
+  padding-top: 3px;
+  padding-right: 3px;
+  position: relative;
+  top: 3px;
+}
+
+nav > ul > li:nth-child(3) > a > span {
+  padding-top: 5px;
+  padding-right: 3px;
+  position: relative;
+  top: 3px;
+}
+
+body > nav > ul > li:nth-child(3) {
+  margin-bottom: 5px;
+}
+
+header {
+  margin-top: 15px;
+  height: 5vh;
+}
+
+.contorno-bloco {
+  width: fit-content;
+  background-color: var(--cor-blocos);
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-bottom: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contorno-bloco > span {
+  font-size: 30px;
+  padding: 3px 3px 0px 3px;
+}
+
+h1 {
+  font-size: 27px;
+  display: inline-block;
+  transform: translateY(3px)
 }
