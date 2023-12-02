@@ -144,6 +144,7 @@ body > nav > ul > li:nth-child(3) {
 header {
   margin-top: 15px;
   height: 5vh;
+  overflow-y: hidden;
 }
 
 .contorno-bloco {
@@ -165,4 +166,83 @@ h1 {
   font-size: 27px;
   display: inline-block;
   transform: translateY(3px)
+}
+
+#caixa1{
+  width: 96%;
+  height: fit-content;
+  margin: auto;
+  background-color: var(--cor-blocos);
+  border-radius: 10px;
+  margin-top: 7px;
+  padding-bottom: 10px;
+}
+
+#caixa1 > h2 {
+  padding: 10px 0px 0px 4px;
+}
+
+#caixa1 > p {
+  padding-left: 4px;
+  padding-bottom: 10px;
+}
+
+#caixa1 > div:nth-child(3) {
+  width: fit-content;
+  display: inline-block;
+  padding: 0px 10px 0px 10px;
+  border-right: 3px solid var(--cor-risco);
+}
+
+#caixa1 > div:nth-child(3) > ol > li {
+  padding-bottom: 4px;
+}
+
+.graficos {
+  display: inline-block;
+  vertical-align: middle;
+  height: 117px;
+  position: absolute;
+  overflow-y: hidden;
+}
+
+.graficos > .linhas{
+  display: inline-block; 
+  height: 20px; 
+  background-color: #5F7ADA;
+  margin-right: 10px; 
+}
+
+.linhas:first-child {
+  width: 190px; 
+}
+
+.linhas:nth-child(2) {
+  width: 180px;
+}
+
+.linhas:nth-child(3) {
+  width: 90px;
+  margin-right: 100px;
+}
+
+.linhas:nth-child(4) {
+  width: 48px;
+  margin-right: 100px;
+}
+
+.linhas:nth-child(5) {
+  width: 23px;
+  margin-right: 180px;
+}
+
+.texto-pontos {
+  display: inline-block;
+  position: absolute;
+  left: 330px;
+  top: 195px;
+}
+
+#pontuação > li{
+  margin-bottom: 7px;
 }
