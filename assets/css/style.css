@@ -405,6 +405,25 @@ th, td {
   padding: 5px;
 }
 
+#regras {
+  display: none;
+  overflow-y: hidden;
+}
+
+#regras > div:first-child{
+  width: 100vw;
+  height: 8vh;
+}
+
+#tabela-regras {
+  width: 90%;
+  height: fit-content;
+  margin: auto;
+  text-align: justify;
+  background-color: var(--cor-blocos);
+  border-radius: 10px;
+}
+
 
 footer {
   border-top: 1px solid var(--cor-risco);
