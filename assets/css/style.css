@@ -209,7 +209,7 @@ h1 {
 .graficos > .linhas{
   display: inline-block; 
   height: 20px; 
-  background-color: #5F7ADA;
+  background: linear-gradient(to right, #465796, #5F7ADA 60%);
   margin-right: 10px; 
 }
 
@@ -236,13 +236,80 @@ h1 {
   margin-right: 180px;
 }
 
+
+#pontuação > li{
+  margin-bottom: 7px;
+}
+
 .texto-pontos {
   display: inline-block;
   position: absolute;
-  left: 330px;
-  top: 195px;
+  left: calc(320px - 1vw);
 }
 
 #pontuação > li{
   margin-bottom: 7px;
+  text-align: justify;
+}
+
+#caixa2 {
+  width: 96%;
+  height: fit-content;
+  margin: auto;
+  background-color: var(--cor-blocos);
+  border-radius: 10px;
+  margin-top: 7px;
+  margin-bottom: 1px;
+  padding-bottom: 10px;
+}
+
+#caixa2 > h2 {
+  padding: 10px 0px 0px 5px;
+}
+
+#caixa2 > p {
+  padding-left: 7px;
+  padding-bottom: 10px;
+}
+
+#caixa2 > div:nth-child(3) {
+  width: fit-content;
+  display: inline-block;
+  padding: 0px 10px 0px 10px;
+  border-right: 3px solid var(--cor-risco);
+}
+
+#caixa2 > div:nth-child(3) > ul > li {
+  padding-bottom: 4px;
+}
+
+#caixa2 > div.graficos > div:nth-child(1) {
+  background: linear-gradient(to right, #C17DFB 0%, #8B52E1 67%);
+}
+
+#caixa2 > div.graficos > div:nth-child(2) {
+  background: linear-gradient(to right, #C17DFB 0%, #8B52E1 67%);
+}
+
+#caixa2 > div.graficos > div:nth-child(3) {
+  background: linear-gradient(to right, #C17DFB 0%, #8B52E1 67%);
+}
+
+#caixa2 > div.graficos > div:nth-child(4) {
+  background: linear-gradient(to right, #C17DFB 0%, #8B52E1 67%);
+}
+
+#caixa2 > div.graficos > div:nth-child(5) {
+  background: linear-gradient(to right, #C17DFB 0%, #8B52E1 67%);
+}
+
+#texto-horas {
+  display: inline-block;
+  position: absolute;
+  left: calc(320px - 2vw);
+  text-align: justify;
+}
+
+#texto-horas > ul > li {
+  margin-bottom: 5px;
 }
