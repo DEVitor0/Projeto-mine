@@ -343,7 +343,7 @@ h1 {
   display: none;
 }
 
-#titulo {
+.titulo {
   transform: translateY(20px);
   margin-left: 2px;
 }
@@ -377,6 +377,34 @@ th, td {
   list-style-position: inside;
   margin-left: 20px;
 }
+
+.materia {
+  width: 78%;
+  height: fit-content;
+  background-color: var(--cor-blocos);
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+#noticias > div.materia > div {
+  width: 50%;
+}
+
+.imagem {
+  width: 50%;
+}
+
+#noticias > div.materia > div > h3 {
+  padding: 5px;
+}
+
+#noticias > div.materia > div > p {
+  padding: 5px;
+}
+
 
 footer {
   border-top: 1px solid var(--cor-risco);
