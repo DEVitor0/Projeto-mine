@@ -91,56 +91,90 @@
                 </ul>
             </div>
         </div>
-        <div id="eventos">
-            <span class="material-symbols-outlined">
-                calendar_month
-            </span>
-            <h2>Eventos dentro do jogo</h2>
-            <p>O próximo evento acontecerá dia: ?</p>
+        <div id="sobre-server">
             <div>
-                <div>&#x2694;</div>
-                <p>Batalha entre jogadores</p>
+                <div class="contorno-bloco">
+                    <span class="material-symbols-outlined">
+                        dns
+                    </span>
+                </div>
+                <h2>Tudo sobre o servidor</h2>
             </div>
-            <div>
-                <h3>Detalhes sobre o evento: </h3>
-                <div>
-                    <h4>Oque é a batlha entre jogadores ?</h4>
-                    <p>Consiste na batalha entre os jogadores nos quais vão lutar até a morte com equipamentos já pré definidos</p>
+            <nav class="main-nav">
+                <div onclick="clicou()" id="Evento">
+                    <span class="material-symbols-outlined">
+                        calendar_clock
+                    </span>
+                    <p>Eventos</p>
                 </div>
-                <div>
-                    <h4>Quais são os equipamentos necessários ?</h4>
-                    <ol>
-                        <li>set de armadura full ferro</li>
-                        <li>espadas de pedra</li>
-                        <li>escudo</li>
-                        <li>carnes de porco cozidas</li>
-                    </ol>
+                <div onclick="clicado()" id="Notícias">
+                    <span class="material-symbols-outlined">
+                        breaking_news
+                    </span>
+                    <p>Notícias</p>
                 </div>
-                <div>
-                    <h4>Premiação: 6 diamantes de cada jogador</h4>
+                <div id="Regras" onclick="cliquei()">
+                    <span class="material-symbols-outlined">
+                        gavel
+                        </span>
+                    <p>Regras</p>
                 </div>
-                <div>
-                    <h4>hora e data</h4>
-                    <p>O evento acontecerá as 14:00pm nas coordenadas x:234, y:64, z:721</p>
+            </nav>
+            <div id="conteudos">
+                <div id="eventos">
+                    <div class="contorno-bloco">
+                        <span class="material-symbols-outlined">
+                            calendar_month
+                        </span>
+                    </div>
+                    <h2>Eventos dentro do jogo</h2>
+                    <p>O próximo evento acontecerá dia: ?</p>
+                    <div>
+                        <div>&#x2694;</div>
+                        <p>Batalha entre jogadores</p>
+                    </div>
+                    <div>
+                        <h3>Detalhes sobre o evento: </h3>
+                        <div>
+                            <h4>Oque é a batlha entre jogadores ?</h4>
+                            <p>Consiste na batalha entre os jogadores nos quais vão lutar até a morte com equipamentos já pré definidos</p>
+                        </div>
+                        <div>
+                            <h4>Quais são os equipamentos necessários ?</h4>
+                            <ol>
+                                <li>set de armadura full ferro</li>
+                                <li>espadas de pedra</li>
+                                <li>escudo</li>
+                                <li>carnes de porco cozidas</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4>Premiação: 6 diamantes de cada jogador</h4>
+                        </div>
+                        <div>
+                            <h4>hora e data</h4>
+                            <p>O evento acontecerá as 14:00pm nas coordenadas x:234, y:64, z:721</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div id="noticias">
-            <span class="material-symbols-outlined">
-                breaking_news
-            </span>
-            <h2>Últimas notícias</h2>
-            <div id="kill">
-                <div>
-                    <h3>Vikthpo07 mata brutalmente Grossigamers</h3>
-                    <p>Após uma piada feita por grossi, Vikthpo07 assasinou ele com uma enxada</p>
+                <div id="noticias">
+                    <span class="material-symbols-outlined">
+                        breaking_news
+                    </span>
+                    <h2>Últimas notícias</h2>
+                    <div id="kill">
+                        <div>
+                            <h3>Vikthpo07 mata brutalmente Grossigamers</h3>
+                            <p>Após uma piada feita por grossi, Vikthpo07 assasinou ele com uma enxada</p>
+                        </div>
+                        <img src="images/itens.webp" alt="grossi morto">
+                    </div>
                 </div>
-                <img src="images/itens.webp" alt="grossi morto">
             </div>
         </div>
     </main>
     <footer>
-        <p>Site desenvolvido por <a href="https://github.com/DEVitor0">Vitor moreira</a></p>
+        <p>Site desenvolvido exclusivamente por <a href="https://github.com/DEVitor0">Vitor moreira</a></p>
     </footer>
 </body>
 <script src="assets/js/script.js"></script>
