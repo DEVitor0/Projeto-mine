@@ -101,13 +101,13 @@
                 <h2>Tudo sobre o servidor</h2>
             </div>
             <nav class="main-nav">
-                <div onclick="clicou()" id="Evento">
+                <div onclick="mostrarConteudo('eventos')" id="Evento">
                     <span class="material-symbols-outlined">
                         calendar_clock
                     </span>
                     <p>Eventos</p>
                 </div>
-                <div onclick="clicado()" id="Notícias">
+                <div onclick="mostrarConteudo('noticias')" id="Notícias">
                     <span class="material-symbols-outlined">
                         breaking_news
                     </span>
@@ -122,40 +122,51 @@
             </nav>
             <div id="conteudos">
                 <div id="eventos">
-                    <div class="contorno-bloco">
-                        <span class="material-symbols-outlined">
-                            calendar_month
-                        </span>
+                    <div id="titulo">
+                        <div class="contorno-bloco">
+                            <span class="material-symbols-outlined">
+                                calendar_month
+                            </span>
+                        </div>
+                        <h2>Eventos dentro do jogo</h2>
                     </div>
-                    <h2>Eventos dentro do jogo</h2>
-                    <p>O próximo evento acontecerá dia: ?</p>
-                    <div>
-                        <div>&#x2694;</div>
-                        <p>Batalha entre jogadores</p>
-                    </div>
-                    <div>
-                        <h3>Detalhes sobre o evento: </h3>
-                        <div>
-                            <h4>Oque é a batlha entre jogadores ?</h4>
-                            <p>Consiste na batalha entre os jogadores nos quais vão lutar até a morte com equipamentos já pré definidos</p>
-                        </div>
-                        <div>
-                            <h4>Quais são os equipamentos necessários ?</h4>
-                            <ol>
-                                <li>set de armadura full ferro</li>
-                                <li>espadas de pedra</li>
-                                <li>escudo</li>
-                                <li>carnes de porco cozidas</li>
-                            </ol>
-                        </div>
-                        <div>
-                            <h4>Premiação: 6 diamantes de cada jogador</h4>
-                        </div>
-                        <div>
-                            <h4>hora e data</h4>
-                            <p>O evento acontecerá as 14:00pm nas coordenadas x:234, y:64, z:721</p>
-                        </div>
-                    </div>
+                    <table>
+                        <tr>
+                          <th>Evento</th>
+                          <td>Modo de jogo: Batalha entre jogadores</td>
+                        </tr>
+                        <tr>
+                          <th>O que é a batalha entre jogadores?</th>
+                          <td>
+                            <p>Consiste na batalha entre os jogadores nos quais vão lutar até a morte com equipamentos já pré-definidos</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Quais são os equipamentos necessários?</th>
+                          <td>
+                            <div class="white-bg">
+                              <ul>
+                                <li>Set de armadura full ferro</li>
+                                <li>Espadas de pedra</li>
+                                <li>Escudo</li>
+                                <li>Carnes de porco cozidas</li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Premiação</th>
+                          <td>vinte e duas barras de ferro de cada jogador</td>
+                        </tr>
+                        <tr>
+                          <th>Hora e data</th>
+                          <td>O evento acontecerá às 14:00pm no dia 24/12</td>
+                        </tr>
+                        <tr>
+                          <th>Coordenadas</th>
+                          <td>coordenadas x:234, y:64, z:721</td>
+                        </tr>
+                      </table>
                 </div>
                 <div id="noticias">
                     <span class="material-symbols-outlined">
@@ -174,7 +185,7 @@
         </div>
     </main>
     <footer>
-        <p>Site desenvolvido exclusivamente por <a href="https://github.com/DEVitor0">Vitor moreira</a></p>
+        <p>Site desenvolvido exclusivamente por <a href="https://github.com/DEVitor0">Vitor Moreira</a></p>
     </footer>
 </body>
 <script src="assets/js/script.js"></script>

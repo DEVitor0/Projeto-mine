@@ -339,9 +339,50 @@ h1 {
   padding: 2px 10px ;
 }
 
-#eventos {
-  z-index: 1;
+#noticias {
+  display: none;
 }
 
+#titulo {
+  transform: translateY(20px);
+  margin-left: 2px;
+}
 
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #353434;
+  color: white;
+  border: 1px solid rgb(39, 36, 36);
+  border-radius: 5px;
+  overflow-x: hidden;
+}
+th, td {
+  border: 1px solid #999;
+  padding: 8px;
+  text-align: left;
+}
 
+#eventos > table > tbody > tr:nth-child(3) > td {
+  padding: 2px;
+}
+
+.white-bg {
+  padding: 5px;
+  border-radius: 5px;
+}
+.white-bg ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 20px;
+}
+
+footer {
+  border-top: 1px solid var(--cor-risco);
+  padding: 10px;
+}
+
+footer a {
+  color: white;
+}

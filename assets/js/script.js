@@ -8,3 +8,16 @@ hamburgerBtn.addEventListener('click', function() {
 });
 
 
+function mostrarConteudo(tipo) {
+  const eventos = document.getElementById('eventos');
+  const noticias = document.getElementById('noticias');
+
+  if (tipo === 'eventos') {
+      eventos.style.display = 'block';
+      noticias.style.display = 'none';
+  } else if (tipo === 'noticias') {
+      eventos.style.display = 'none';
+      noticias.style.display = 'block';
+  }
+}
+
