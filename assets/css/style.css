@@ -415,15 +415,71 @@ th, td {
   height: 8vh;
 }
 
-#tabela-regras {
-  width: 90%;
-  height: fit-content;
-  margin: auto;
-  text-align: justify;
+/* Estilizando a seção de regras do mapa */
+#regras {
+  padding: 0px 20px 20px 20px;
   background-color: var(--cor-blocos);
   border-radius: 10px;
+  margin: 20px;
+  color: white;
+
 }
 
+#regras .titulo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative;
+  left: 30px;
+}
+
+#regras .contorno-bloco {
+  background-color: var(--cor-blocos);
+  color: white;
+  border: 2px solid var(--cor-risco);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 24px;
+}
+
+#regras h2 {
+  font-size: 24px;
+  margin: 0;
+  color: white;
+}
+
+#regras > div.titulo > h2 {
+  transform: translateY(-10px);
+}
+
+#regras #tabela-regras div {
+  margin-bottom: 20px;
+}
+
+#regras h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+#regras p {
+  line-height: 1.6;
+}
+
+#regras ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+#regras li {
+  margin-bottom: 8px;
+  list-style-position: inside;
+}
 
 footer {
   border-top: 1px solid var(--cor-risco);
