@@ -415,7 +415,6 @@ th, td {
   height: 8vh;
 }
 
-/* Estilizando a seção de regras do mapa */
 #regras {
   padding: 0px 20px 20px 20px;
   background-color: var(--cor-blocos);
