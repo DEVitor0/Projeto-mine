@@ -14,11 +14,31 @@
     --cor-risco: rgb(39, 36, 36);
 }
 
-body {
-  background-color: black;
-  color: white;
-  overflow-y: hidden;
+body:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 15%, #000000 30%, #1a1a1a 45%, #000000 60%, #1a1a1a 75%, #000000 90%);
+  background-size: 400% 400%;
+  animation: Animaçãogradiente 15s ease infinite;
 }
+
+@keyframes Animaçãogradiente {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 .mobile-nav {
     width: 100vw;
@@ -160,7 +180,12 @@ section {
 
 #icon-user > .material-symbols-outlined {
   font-size: 100px;
-  margin-top: 50px;
+  margin-top: 40px;
+  color: white;
+}
+
+h1 {
+  color: white;
 }
 
 .campo {
@@ -180,3 +205,20 @@ section {
 #user {
   border-radius: 5px;
 }
+
+.contorno-bloco {
+  width: fit-content;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 5px;
+  color: #333;
+}
+
+#formulario > form > input[type=submit] {
+  width: 220px;
+  height: 30px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
