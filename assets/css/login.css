@@ -202,7 +202,7 @@ h1 {
   font-size: 23px;
 }
 
-#user {
+#user, #senha {
   border-radius: 5px;
 }
 
@@ -221,4 +221,5 @@ h1 {
   margin-top: 10px;
   font-size: 20px;
 }
+
 
