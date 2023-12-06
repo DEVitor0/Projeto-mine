@@ -204,6 +204,7 @@ h1 {
 #user, #senha {
   border-radius: 5px;
   font-size: 16px;
+  border: none;
 }
 
 .contorno-bloco {
