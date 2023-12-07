@@ -195,7 +195,8 @@ body > nav > ul > li:nth-child(3) {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; 
+  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
 }
 
 .container-item {
@@ -211,17 +212,24 @@ body > nav > ul > li:nth-child(3) {
   color: #fff; 
 }
 
+.quantidades {
+  width: 28px;
+  transform: translate(158px, -38px);
+  background-color: gray;
+  padding: 3px;
+  border-radius: 5px;
+}
+
 .container-item img {
   width: 100%;
   height: auto;
-  border-radius: 5px;
   padding-bottom: 10px;
   border-bottom: 1px solid white;
 }
 
 .container-item h3 {
-  margin-top: 10px;
-  font-size: 16px;
+  font-size: 20px;
+  transform: translateY(-15px);
 }
 
 .container-item button {
@@ -231,4 +239,18 @@ body > nav > ul > li:nth-child(3) {
   color: #fff; 
   border: none;
   border-radius: 5px;
+}
+
+#vikthpo07 > div> div > span {
+  font-size: 34px;
+}
+
+.preços-personalizados {
+  display: inline-block;
+  font-size: 22px;
+  transform: translateY(-6px);
+}
+
+button {
+  display: block;
 }
