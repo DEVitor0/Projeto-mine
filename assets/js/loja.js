@@ -85,3 +85,44 @@ document.addEventListener('DOMContentLoaded', function () {
     precoPedraLisa.textContent = novoPreco;
   }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const carvaoQuantidade = document.getElementById('carvão');
+  const precoCarvao = document.getElementById('preço-carvão');
+
+  carvaoQuantidade.addEventListener('click', function () {
+    switch (this.textContent) {
+      case '64X':
+        this.textContent = '32X';
+        atualizarPrecoCarvao(32);
+        break;
+      case '32X':
+        this.textContent = '18X';
+        atualizarPrecoCarvao(18);
+        break;
+      case '18X':
+        this.textContent = '9X';
+        atualizarPrecoCarvao(9);
+        break;
+      case '9X':
+        this.textContent = '64X';
+        atualizarPrecoCarvao(64);
+        break;
+      default:
+        break;
+    }
+  });
+
+  function atualizarPrecoCarvao(novaQuantidade) {
+    const precosPorQuantidadeCarvao = {
+      64: '$16',
+      32: '$8',
+      18: '$4',
+      9: '$2'
+    };
+
+    const novoPrecoCarvao = precosPorQuantidadeCarvao[novaQuantidade];
+    precoCarvao.textContent = novoPrecoCarvao;
+  }
+});
+
