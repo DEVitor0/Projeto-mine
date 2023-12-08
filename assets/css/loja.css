@@ -213,7 +213,7 @@ body > nav > ul > li:nth-child(3) {
 }
 
 .quantidades {
-  width: 28px;
+  width: fit-content;
   transform: translate(158px, -38px);
   background-color: gray;
   padding: 3px;
