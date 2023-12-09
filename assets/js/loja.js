@@ -447,4 +447,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+function deslogado() {
+  window.alert('atualmente você está desconectado de sua conta. Conecte-se para efetuar a compra')
+}
 
+//acima é vikthpo e para baixo é 

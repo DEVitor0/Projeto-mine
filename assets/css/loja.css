@@ -182,13 +182,28 @@ body > nav > ul > li:nth-child(3) {
 }
 
 #lojas {
-  margin-top: 20px;
   padding: 20px;
   color: #fff; 
+  border-top: 1px solid var(--cor-risco);
 }
 
 #lojas > h2 {
+  margin-bottom: 152px;
+  display: inline;
+}
+
+.contorno-bloco {
+  width: fit-content;
+  background-color: var(--cor-blocos);
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: middle;
   margin-bottom: 15px;
+}
+
+.contorno-bloco > span {
+  font-size: 30px;
+  padding: 3px 3px 0px 3px;
 }
 
 .carousel {
@@ -253,4 +268,19 @@ body > nav > ul > li:nth-child(3) {
 
 button {
   display: block;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.titulo > h2 {
+  margin-bottom: 7px;
+  padding-left: 5px;
+}
+
+#kevin > div > div > span {
+  font-size: 34px;
 }
