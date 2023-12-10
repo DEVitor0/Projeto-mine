@@ -301,30 +301,10 @@ button {
   height: 57.6%;
 }
 
-#andre > div:nth-child(9) > img {
+#andre > .container-item > img {
   height: 57.6%;
 }
 
-#andre > div:nth-child(10) > img {
-  height: 57.6%;
-}
-
-#andre > div:nth-child(12) > img {
-  height: 57.6%;
-}
-
-#andre > div:nth-child(13) > img {
-  height: 57.6%;
-}
-
-#andre > div:nth-child(14) > img {
-  height: 57.6%;
-}
-
-#andre > div:nth-child(15) > img {
-  height: 57.6%;
-}
-
-#andre > div:nth-child(16) > img {
-  height: 57.6%;
+#andre > div > div > span {
+  font-size: 34px;
 }
