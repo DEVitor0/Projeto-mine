@@ -301,6 +301,30 @@ button {
   height: 57.6%;
 }
 
-#andre {
-  margin-top: 15px;
+#andre > div:nth-child(9) > img {
+  height: 57.6%;
+}
+
+#andre > div:nth-child(10) > img {
+  height: 57.6%;
+}
+
+#andre > div:nth-child(12) > img {
+  height: 57.6%;
+}
+
+#andre > div:nth-child(13) > img {
+  height: 57.6%;
+}
+
+#andre > div:nth-child(14) > img {
+  height: 57.6%;
+}
+
+#andre > div:nth-child(15) > img {
+  height: 57.6%;
+}
+
+#andre > div:nth-child(16) > img {
+  height: 57.6%;
 }
