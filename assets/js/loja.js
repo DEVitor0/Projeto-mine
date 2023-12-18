@@ -7,443 +7,50 @@ hamburgerBtn.addEventListener('click', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  const pedregulhoQuantidade = document.getElementById('pedregulho');
-  const precoPedregulho = document.getElementById('preço-pedregulho');
+  const items = [
+    { id: 'pedregulho', precoId: 'preço-pedregulho', precos: { 64: '$8', 32: '$4', 18: '$2', 9: '$1' } },
+    { id: 'pedra-lisa', precoId: 'preço-pedra', precos: { 64: '$10', 32: '$5', 18: '$3', 9: '$2' } },
+    { id: 'carvão', precoId: 'preço-carvão', precos: { 64: '$16', 32: '$8', 18: '$4', 9: '$2' } },
+    { id: 'cobre', precoId: 'preço-cobre', precos: { 64: '$14', 32: '$7', 18: '$4', 9: '$2' } },
+    { id: 'ametista', precoId: 'preço-ametista', precos: { 64: '$10', 32: '$5', 18: '$3', 9: '$2' } },
+    { id: 'ferro', precoId: 'preço-ferro', precos: { 64: '$26', 32: '$13', 18: '$7', 9: '$4' } },
+    { id: 'ouro', precoId: 'preço-ouro', precos: { 64: '$28', 32: '$14', 18: '$7', 9: '$4' } },
+    { id: 'lapis', precoId: 'preço-lapis', precos: { 64: '$24', 32: '$12', 18: '$6', 9: '$4' } },
+    { id: 'diamante', precoId: 'preço-diamante', precos: { 64: '$70', 32: '$60', 18: '$40', 9: '$28' } },
+    { id: 'quartzo', precoId: 'preço-quartzo', precos: { 64: '$24', 32: '$12', 18: '$6', 9: '$4' } },
+    { id: 'netherite', precoId: 'preço-netherite', precos: { 10: '$250', 5: '$125', 2: '$75', 1: '$32' } },
+  ];
 
-  pedregulhoQuantidade.addEventListener('click', function () {
-    switch (this.textContent) {
-      case '64X':
-        this.textContent = '32X';
-        atualizarPreco(32);
-        break;
-      case '32X':
-        this.textContent = '18X';
-        atualizarPreco(18);
-        break;
-      case '18X':
-        this.textContent = '9X';
-        atualizarPreco(9);
-        break;
-      case '9X':
-        this.textContent = '64X';
-        atualizarPreco(64);
-        break;
-      default:
-        break;
-    }
+  items.forEach(item => {
+    const quantidade = document.getElementById(item.id);
+    const preco = document.getElementById(item.precoId);
+
+    quantidade.addEventListener('click', function () {
+      switch (this.textContent) {
+        case '64X':
+          this.textContent = '32X';
+          atualizarPreco(preco, item.precos[32]);
+          break;
+        case '32X':
+          this.textContent = '18X';
+          atualizarPreco(preco, item.precos[18]);
+          break;
+        case '18X':
+          this.textContent = '9X';
+          atualizarPreco(preco, item.precos[9]);
+          break;
+        case '9X':
+          this.textContent = '64X';
+          atualizarPreco(preco, item.precos[64]);
+          break;
+        default:
+          break;
+      }
+    });
   });
 
-  function atualizarPreco(novaQuantidade) {
-    const precosPorQuantidade = {
-      64: '$8',
-      32: '$4',
-      18: '$2',
-      9: '$1'
-    };
-
-    const novoPreco = precosPorQuantidade[novaQuantidade];
-    precoPedregulho.textContent = novoPreco;
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const pedraLisaQuantidade = document.getElementById('pedra-lisa');
-  const precoPedraLisa = document.getElementById('preço-pedra');
-
-  pedraLisaQuantidade.addEventListener('click', function () {
-    switch (this.textContent) {
-      case '64X':
-        this.textContent = '32X';
-        atualizarPreco(32);
-        break;
-      case '32X':
-        this.textContent = '18X';
-        atualizarPreco(18);
-        break;
-      case '18X':
-        this.textContent = '9X';
-        atualizarPreco(9);
-        break;
-      case '9X':
-        this.textContent = '64X';
-        atualizarPreco(64);
-        break;
-      default:
-        break;
-    }
-  });
-
-  function atualizarPreco(novaQuantidade) {
-    const precosPorQuantidade = {
-      64: '$10',
-      32: '$5',
-      18: '$3',
-      9: '$2'
-    };
-
-    const novoPreco = precosPorQuantidade[novaQuantidade];
-    precoPedraLisa.textContent = novoPreco;
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const carvaoQuantidade = document.getElementById('carvão');
-  const precoCarvao = document.getElementById('preço-carvão');
-
-  carvaoQuantidade.addEventListener('click', function () {
-    switch (this.textContent) {
-      case '64X':
-        this.textContent = '32X';
-        atualizarPrecoCarvao(32);
-        break;
-      case '32X':
-        this.textContent = '18X';
-        atualizarPrecoCarvao(18);
-        break;
-      case '18X':
-        this.textContent = '9X';
-        atualizarPrecoCarvao(9);
-        break;
-      case '9X':
-        this.textContent = '64X';
-        atualizarPrecoCarvao(64);
-        break;
-      default:
-        break;
-    }
-  });
-
-  function atualizarPrecoCarvao(novaQuantidade) {
-    const precosPorQuantidadeCarvao = {
-      64: '$16',
-      32: '$8',
-      18: '$4',
-      9: '$2'
-    };
-
-    const novoPrecoCarvao = precosPorQuantidadeCarvao[novaQuantidade];
-    precoCarvao.textContent = novoPrecoCarvao;
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const cobreQuantidade = document.getElementById('cobre');
-  const precoCobre = document.getElementById('preço-cobre');
-
-  cobreQuantidade.addEventListener('click', function () {
-    switch (this.textContent) {
-      case '64X':
-        this.textContent = '32X';
-        atualizarPrecoCobre(32);
-        break;
-      case '32X':
-        this.textContent = '18X';
-        atualizarPrecoCobre(18);
-        break;
-      case '18X':
-        this.textContent = '9X';
-        atualizarPrecoCobre(9);
-        break;
-      case '9X':
-        this.textContent = '64X';
-        atualizarPrecoCobre(64);
-        break;
-      default:
-        break;
-    }
-  });
-
-  function atualizarPrecoCobre(novaQuantidade) {
-    const precosPorQuantidadeCobre = {
-      64: '$14',
-      32: '$7',
-      18: '$4',
-      9: '$2'
-    };
-
-    const novoPrecoCobre = precosPorQuantidadeCobre[novaQuantidade];
-    precoCobre.textContent = novoPrecoCobre;
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const ametistaQuantidade = document.getElementById('ametista');
-  const precoAmetista = document.getElementById('preço-ametista');
-
-  ametistaQuantidade.addEventListener('click', function () {
-    switch (this.textContent) {
-      case '64X':
-        this.textContent = '32X';
-        atualizarPrecoAmetista(32);
-        break;
-      case '32X':
-        this.textContent = '18X';
-        atualizarPrecoAmetista(18);
-        break;
-      case '18X':
-        this.textContent = '9X';
-        atualizarPrecoAmetista(9);
-        break;
-      case '9X':
-        this.textContent = '64X';
-        atualizarPrecoAmetista(64);
-        break;
-      default:
-        break;
-    }
-  });
-
-  function atualizarPrecoAmetista(novaQuantidade) {
-    const precosPorQuantidadeAmetista = {
-      64: '$10',
-      32: '$5',
-      18: '$3',
-      9: '$2'
-    };
-
-    const novoPrecoAmetista = precosPorQuantidadeAmetista[novaQuantidade];
-    precoAmetista.textContent = novoPrecoAmetista;
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const ferroQuantidade = document.getElementById('ferro');
-  const precoFerro = document.getElementById('preço-ferro');
-
-  ferroQuantidade.addEventListener('click', function () {
-    switch (this.textContent) {
-      case '64X':
-        this.textContent = '32X';
-        atualizarPrecoFerro(32);
-        break;
-      case '32X':
-        this.textContent = '18X';
-        atualizarPrecoFerro(18);
-        break;
-      case '18X':
-        this.textContent = '9X';
-        atualizarPrecoFerro(9);
-        break;
-      case '9X':
-        this.textContent = '64X';
-        atualizarPrecoFerro(64);
-        break;
-      default:
-        break;
-    }
-  });
-
-  function atualizarPrecoFerro(novaQuantidade) {
-    const precosPorQuantidadeFerro = {
-      64: '$26',
-      32: '$13',
-      18: '$7',
-      9: '$4'
-    };
-
-    const novoPrecoFerro = precosPorQuantidadeFerro[novaQuantidade];
-    precoFerro.textContent = novoPrecoFerro;
-  }
-});
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  const ouroQuantidade = document.getElementById('ouro');
-  const precoOuro = document.getElementById('preço-ouro');
-
-  ouroQuantidade.addEventListener('click', function () {
-    switch (this.textContent) {
-      case '64X':
-        this.textContent = '32X';
-        atualizarPrecoOuro(32);
-        break;
-      case '32X':
-        this.textContent = '18X';
-        atualizarPrecoOuro(18);
-        break;
-      case '18X':
-        this.textContent = '9X';
-        atualizarPrecoOuro(9);
-        break;
-      case '9X':
-        this.textContent = '64X';
-        atualizarPrecoOuro(64);
-        break;
-      default:
-        break;
-    }
-  });
-
-  function atualizarPrecoOuro(novaQuantidade) {
-    const precosPorQuantidadeOuro = {
-      64: '$28',
-      32: '$14',
-      18: '$7',
-      9: '$4'
-    };
-
-    const novoPrecoOuro = precosPorQuantidadeOuro[novaQuantidade];
-    precoOuro.textContent = novoPrecoOuro;
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const lapisQuantidade = document.getElementById('lapis');
-  const precoLapis = document.getElementById('preço-lapis');
-
-  lapisQuantidade.addEventListener('click', function () {
-    switch (this.textContent) {
-      case '64X':
-        this.textContent = '32X';
-        atualizarPrecoLapis(32);
-        break;
-      case '32X':
-        this.textContent = '18X';
-        atualizarPrecoLapis(18);
-        break;
-      case '18X':
-        this.textContent = '9X';
-        atualizarPrecoLapis(9);
-        break;
-      case '9X':
-        this.textContent = '64X';
-        atualizarPrecoLapis(64);
-        break;
-      default:
-        break;
-    }
-  });
-
-  function atualizarPrecoLapis(novaQuantidade) {
-    const precosPorQuantidadeLapis = {
-      64: '$24',
-      32: '$12',
-      18: '$6',
-      9: '$4'
-    };
-
-    const novoPrecoLapis = precosPorQuantidadeLapis[novaQuantidade];
-    precoLapis.textContent = novoPrecoLapis;
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const diamanteQuantidade = document.getElementById('diamante');
-  const precoDiamante = document.getElementById('preço-diamante');
-
-  diamanteQuantidade.addEventListener('click', function () {
-    switch (this.textContent) {
-      case '64X':
-        this.textContent = '32X';
-        atualizarPrecoDiamante(32);
-        break;
-      case '32X':
-        this.textContent = '18X';
-        atualizarPrecoDiamante(18);
-        break;
-      case '18X':
-        this.textContent = '9X';
-        atualizarPrecoDiamante(9);
-        break;
-      case '9X':
-        this.textContent = '64X';
-        atualizarPrecoDiamante(64);
-        break;
-      default:
-        break;
-    }
-  });
-
-  function atualizarPrecoDiamante(novaQuantidade) {
-    const precosPorQuantidadeDiamante = {
-      64: '$70',
-      32: '$60',
-      18: '$40',
-      9: '$28'
-    };
-
-    const novoPrecoDiamante = precosPorQuantidadeDiamante[novaQuantidade];
-    precoDiamante.textContent = novoPrecoDiamante;
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const quartzoQuantidade = document.getElementById('quartzo');
-  const precoQuartzo = document.getElementById('preço-quartzo');
-
-  quartzoQuantidade.addEventListener('click', function () {
-    switch (this.textContent) {
-      case '64X':
-        this.textContent = '32X';
-        atualizarPrecoQuartzo(32);
-        break;
-      case '32X':
-        this.textContent = '18X';
-        atualizarPrecoQuartzo(18);
-        break;
-      case '18X':
-        this.textContent = '9X';
-        atualizarPrecoQuartzo(9);
-        break;
-      case '9X':
-        this.textContent = '64X';
-        atualizarPrecoQuartzo(64);
-        break;
-      default:
-        break;
-    }
-  });
-
-  function atualizarPrecoQuartzo(novaQuantidade) {
-    const precosPorQuantidadeQuartzo = {
-      64: '$24',
-      32: '$12',
-      18: '$6',
-      9: '$4'
-    };
-
-    const novoPrecoQuartzo = precosPorQuantidadeQuartzo[novaQuantidade];
-    precoQuartzo.textContent = novoPrecoQuartzo;
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const netheriteQuantidade = document.getElementById('netherite');
-  const precoNetherite = document.getElementById('preço-netherite');
-
-  netheriteQuantidade.addEventListener('click', function () {
-    switch (this.textContent) {
-      case '10X':
-        this.textContent = '5X';
-        atualizarPrecoNetherite(5);
-        break;
-      case '5X':
-        this.textContent = '2X';
-        atualizarPrecoNetherite(2);
-        break;
-      case '2X':
-        this.textContent = '1X';
-        atualizarPrecoNetherite(1);
-        break;
-      case '1X':
-        this.textContent = '10X';
-        atualizarPrecoNetherite(10);
-        break;
-      default:
-        break;
-    }
-  });
-
-  function atualizarPrecoNetherite(novaQuantidade) {
-    const precosPorQuantidadeNetherite = {
-      10: '$250',
-      5: '$125',
-      2: '$75',
-      1: '$32'
-    };
-
-    const novoPrecoNetherite = precosPorQuantidadeNetherite[novaQuantidade];
-    precoNetherite.textContent = novoPrecoNetherite;
+  function atualizarPreco(precoElemento, novoPreco) {
+    precoElemento.textContent = novoPreco;
   }
 });
 
@@ -502,4 +109,190 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-//acima é kevin e abaixo é andresouza
+//acima é kevin e abaixo é JP
+
+document.addEventListener('DOMContentLoaded', function () {
+  const itensComPreco = {
+    'preço-cenoura': 14,
+    'preço-batata': 14,
+    'preço-maça': 14,
+    'preço-Strigo': 14,
+    'preço-Sabobora': 14
+  };
+
+  for (const itemId in itensComPreco) {
+    const quantidade = document.getElementById(itemId.replace('preço-', ''));
+    const preco = document.getElementById(itemId);
+
+    if (quantidade && preco) {
+      quantidade.addEventListener('click', function () {
+        switch (this.textContent) {
+          case '64X':
+            this.textContent = '32X';
+            atualizarPreco(preco, 7);
+            break;
+          case '32X':
+            this.textContent = '18X';
+            atualizarPreco(preco, 4);
+            break;
+          case '18X':
+            this.textContent = '9X';
+            atualizarPreco(preco, 2);
+            break;
+          case '9X':
+            this.textContent = '64X';
+            atualizarPreco(preco, 14);
+            break;
+          default:
+            break;
+        }
+      });
+    }
+  }
+
+  function atualizarPreco(precoElemento, novoPreco) {
+    precoElemento.textContent = `$${novoPreco}`;
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const itensComPreco = {
+    'preço-trigo': 15,
+    'preço-Smelancia': 15,
+    'preço-vaca': 15,
+    'preço-ovelha': 15,
+    'preço-porco': 15,
+    'preço-galinha': 15
+  };
+
+  for (const itemId in itensComPreco) {
+    const quantidade = document.getElementById(itemId.replace('preço-', ''));
+    const preco = document.getElementById(itemId);
+
+    if (quantidade && preco) {
+      quantidade.addEventListener('click', function () {
+        switch (this.textContent) {
+          case '64X':
+            this.textContent = '32X';
+            atualizarPreco(preco, 8);
+            break;
+          case '32X':
+            this.textContent = '18X';
+            atualizarPreco(preco, 4);
+            break;
+          case '18X':
+            this.textContent = '9X';
+            atualizarPreco(preco, 2);
+            break;
+          case '9X':
+            this.textContent = '64X';
+            atualizarPreco(preco, 15);
+            break;
+          default:
+            break;
+        }
+      });
+    }
+  }
+
+  function atualizarPreco(precoElemento, novoPreco) {
+    precoElemento.textContent = `$${novoPreco}`;
+  }
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const bagaQuantidade = document.getElementById('baga');
+  const precoBaga = document.getElementById('preço-baga');
+
+  bagaQuantidade.addEventListener('click', function () {
+    switch (this.textContent) {
+      case '64X':
+        this.textContent = '32X';
+        atualizarPrecoBaga('$5');
+        break;
+      case '32X':
+        this.textContent = '18X';
+        atualizarPrecoBaga('$3');
+        break;
+      case '18X':
+        this.textContent = '9X';
+        atualizarPrecoBaga('$2');
+        break;
+      case '9X':
+        this.textContent = '64X';
+        atualizarPrecoBaga('$10');
+        break;
+      default:
+        break;
+    }
+  });
+
+  function atualizarPrecoBaga(novoPreco) {
+    precoBaga.textContent = novoPreco;
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const melanciaQuantidade = document.getElementById('melancia');
+  const precoMelancia = document.getElementById('preço-melancia');
+
+  melanciaQuantidade.addEventListener('click', function () {
+    switch (this.textContent) {
+      case '64X':
+        this.textContent = '32X';
+        atualizarPrecoMelancia('$5');
+        break;
+      case '32X':
+        this.textContent = '18X';
+        atualizarPrecoMelancia('$3');
+        break;
+      case '18X':
+        this.textContent = '9X';
+        atualizarPrecoMelancia('$2');
+        break;
+      case '9X':
+        this.textContent = '64X';
+        atualizarPrecoMelancia('$10');
+        break;
+      default:
+        break;
+    }
+  });
+
+  function atualizarPrecoMelancia(novoPreco) {
+    precoMelancia.textContent = novoPreco;
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const cacauQuantidade = document.getElementById('cacau');
+  const precoCacau = document.getElementById('preço-cacau');
+
+  cacauQuantidade.addEventListener('click', function () {
+    switch (this.textContent) {
+      case '64X':
+        this.textContent = '32X';
+        atualizarPrecoCacau('$8');
+        break;
+      case '32X':
+        this.textContent = '18X';
+        atualizarPrecoCacau('$4');
+        break;
+      case '18X':
+        this.textContent = '9X';
+        atualizarPrecoCacau('$2');
+        break;
+      case '9X':
+        this.textContent = '64X';
+        atualizarPrecoCacau('$16');
+        break;
+      default:
+        break;
+    }
+  });
+
+  function atualizarPrecoCacau(novoPreco) {
+    precoCacau.textContent = novoPreco;
+  }
+});
