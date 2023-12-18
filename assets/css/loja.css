@@ -226,6 +226,7 @@ body > nav > ul > li:nth-child(3) {
   background-color: gray;
   padding: 3px;
   border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .container-item img {

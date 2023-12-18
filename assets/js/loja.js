@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
     { id: 'pedra-lisa', precoId: 'preço-pedra', precos: { 64: '$10', 32: '$5', 18: '$3', 9: '$2' } },
     { id: 'carvão', precoId: 'preço-carvão', precos: { 64: '$16', 32: '$8', 18: '$4', 9: '$2' } },
     { id: 'cobre', precoId: 'preço-cobre', precos: { 64: '$14', 32: '$7', 18: '$4', 9: '$2' } },
-    { id: 'ametista', precoId: 'preço-ametista', precos: { 64: '$10', 32: '$5', 18: '$3', 9: '$2' } },
     { id: 'ferro', precoId: 'preço-ferro', precos: { 64: '$26', 32: '$13', 18: '$7', 9: '$4' } },
     { id: 'ouro', precoId: 'preço-ouro', precos: { 64: '$28', 32: '$14', 18: '$7', 9: '$4' } },
     { id: 'lapis', precoId: 'preço-lapis', precos: { 64: '$24', 32: '$12', 18: '$6', 9: '$4' } },
@@ -153,10 +152,6 @@ document.addEventListener('DOMContentLoaded', function () {
     Sabobora: { 64: 14, 32: 7, 18: 4, 9: 2 },
     trigo: { 64: 15, 32: 8, 18: 4, 9: 2 },
     Smelancia: { 64: 15, 32: 8, 18: 4, 9: 2 },
-    vaca: { 64: 15, 32: 8, 18: 4, 9: 2 },
-    ovelha: { 64: 15, 32: 8, 18: 4, 9: 2 },
-    porco: { 64: 15, 32: 8, 18: 4, 9: 2 },
-    galinha: { 64: 15, 32: 8, 18: 4, 9: 2 },
     baga: { 64: 10, 32: 5, 18: 3, 9: 2 },
     melancia: { 64: 10, 32: 5, 18: 3, 9: 2 },
     cacau: { 64: 16, 32: 8, 18: 4, 9: 2 },
@@ -166,3 +161,93 @@ document.addEventListener('DOMContentLoaded', function () {
     setupQuantidadePreco(itemId, itens[itemId]);
   }
 });
+
+//Acima é JP e abaixo é Souza
+
+document.addEventListener('DOMContentLoaded', function () {
+  function setupQuantidadePreco(itemId, precoPorQuantidade) {
+    const quantidade = document.getElementById(itemId);
+    const preco = document.getElementById(`preço-${itemId}`);
+
+    quantidade.addEventListener('click', function () {
+      switch (this.textContent) {
+        case '64X':
+          this.textContent = '32X';
+          atualizarPreco(preco, precoPorQuantidade[32]);
+          break;
+        case '32X':
+          this.textContent = '18X';
+          atualizarPreco(preco, precoPorQuantidade[18]);
+          break;
+        case '18X':
+          this.textContent = '9X';
+          atualizarPreco(preco, precoPorQuantidade[9]);
+          break;
+        case '9X':
+          this.textContent = '64X';
+          atualizarPreco(preco, precoPorQuantidade[64]);
+          break;
+        default:
+          break;
+      }
+    });
+  }
+
+  function atualizarPreco(precoElemento, novoPreco) {
+    precoElemento.textContent = `$${novoPreco}`;
+  }
+
+  const novosItens = {
+    cerejeira: { 64: 10, 32: 5, 18: 3, 9: 2 },
+    Scarvalho: { 64: 10, 32: 5, 18: 3, 9: 2 },
+    Sbetula: { 64: 10, 32: 5, 18: 3, 9: 2 },
+    Sabeto: { 64: 10, 32: 5, 18: 3, 9: 2 },
+    Sescuro: { 64: 10, 32: 5, 18: 3, 9: 2 },
+    SSelva: { 64: 10, 32: 5, 18: 3, 9: 2 },
+    Smangue: { 64: 10, 32: 5, 18: 3, 9: 2 },
+  };
+
+  for (const itemId in novosItens) {
+    setupQuantidadePreco(itemId, novosItens[itemId]);
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Função para configurar o #cristal e seu preço correspondente
+  function setupCristal() {
+    const quantidade = document.getElementById('cristal');
+    const preco = document.getElementById('preço-cristal');
+
+    quantidade.addEventListener('click', function () {
+      switch (this.textContent) {
+        case '12X':
+          this.textContent = '6X';
+          atualizarPreco(preco, 8);
+          break;
+        case '6X':
+          this.textContent = '3X';
+          atualizarPreco(preco, 4);
+          break;
+        case '3X':
+          this.textContent = '1X';
+          atualizarPreco(preco, 2);
+          break;
+        case '1X':
+          this.textContent = '12X';
+          atualizarPreco(preco, 16);
+          break;
+        default:
+          break;
+      }
+    });
+  }
+
+  // Função genérica para atualizar o preço no elemento HTML
+  function atualizarPreco(precoElemento, novoPreco) {
+    precoElemento.textContent = `$${novoPreco}`;
+  }
+
+  // Configura o elemento #cristal
+  setupCristal();
+});
+
