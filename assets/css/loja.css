@@ -312,3 +312,12 @@ button {
 #dragonov > div > div > span {
   font-size: 34px;
 }
+
+footer {
+  border-top: 1px solid var(--cor-risco);
+  padding: 10px;
+}
+
+footer a {
+  color: white;
+}

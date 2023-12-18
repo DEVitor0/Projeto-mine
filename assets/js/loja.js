@@ -451,4 +451,55 @@ function deslogado() {
   window.alert('atualmente você está desconectado de sua conta. Conecte-se para efetuar a compra')
 }
 
-//acima é vikthpo e para baixo é 
+//acima é vikthpo e para baixo é a loja do kevin
+
+document.addEventListener('DOMContentLoaded', function () {
+  const itensComPreco = {
+    'carvalho': 15,
+    'abeto': 15,
+    'betula': 15,
+    'escuro': 15,
+    'selva': 15,
+    'acacia': 15,
+    'mangue': 15,
+    'cerejeira': 15,
+    'carmesim': 15,
+    'distorcida': 15
+  };
+
+  for (const itemId in itensComPreco) {
+    const quantidade = document.getElementById(itemId);
+    const preco = document.getElementById(`preço-${itemId}`);
+
+    if (quantidade && preco) {
+      quantidade.addEventListener('click', function () {
+        switch (this.textContent) {
+          case '64X':
+            this.textContent = '32X';
+            atualizarPreco(preco, 8);
+            break;
+          case '32X':
+            this.textContent = '18X';
+            atualizarPreco(preco, 4);
+            break;
+          case '18X':
+            this.textContent = '9X';
+            atualizarPreco(preco, 2);
+            break;
+          case '9X':
+            this.textContent = '64X';
+            atualizarPreco(preco, 15);
+            break;
+          default:
+            break;
+        }
+      });
+    }
+  }
+
+  function atualizarPreco(precoElemento, novoPreco) {
+    precoElemento.textContent = `$${novoPreco}`;
+  }
+});
+
+//acima é kevin e abaixo é andresouza
