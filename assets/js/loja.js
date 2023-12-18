@@ -212,29 +212,35 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+//acima é andre e abaixo é dragonov
+
+// Função genérica para atualizar o preço no elemento HTML
+function atualizarPreco(precoElemento, novoPreco) {
+  precoElemento.textContent = `$${novoPreco}`;
+}
+
 document.addEventListener('DOMContentLoaded', function () {
-  // Função para configurar o #cristal e seu preço correspondente
-  function setupCristal() {
-    const quantidade = document.getElementById('cristal');
-    const preco = document.getElementById('preço-cristal');
+  function configurarElemento(idElemento, idPreco, precoConfig) {
+    const quantidade = document.getElementById(idElemento);
+    const preco = document.getElementById(idPreco);
 
     quantidade.addEventListener('click', function () {
       switch (this.textContent) {
-        case '12X':
-          this.textContent = '6X';
-          atualizarPreco(preco, 8);
+        case precoConfig[0].quantidade:
+          this.textContent = precoConfig[1].quantidade;
+          atualizarPreco(preco, precoConfig[1].preco);
           break;
-        case '6X':
-          this.textContent = '3X';
-          atualizarPreco(preco, 4);
+        case precoConfig[1].quantidade:
+          this.textContent = precoConfig[2].quantidade;
+          atualizarPreco(preco, precoConfig[2].preco);
           break;
-        case '3X':
-          this.textContent = '1X';
-          atualizarPreco(preco, 2);
+        case precoConfig[2].quantidade:
+          this.textContent = precoConfig[3].quantidade;
+          atualizarPreco(preco, precoConfig[3].preco);
           break;
-        case '1X':
-          this.textContent = '12X';
-          atualizarPreco(preco, 16);
+        case precoConfig[3].quantidade:
+          this.textContent = precoConfig[0].quantidade;
+          atualizarPreco(preco, precoConfig[0].preco);
           break;
         default:
           break;
@@ -242,12 +248,33 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Função genérica para atualizar o preço no elemento HTML
-  function atualizarPreco(precoElemento, novoPreco) {
-    precoElemento.textContent = `$${novoPreco}`;
-  }
+  // Configuração dos elementos
+  configurarElemento('cristal', 'preço-cristal', [
+    { quantidade: '12X', preco: 16 },
+    { quantidade: '6X', preco: 8 },
+    { quantidade: '3X', preco: 4 },
+    { quantidade: '1X', preco: 2 }
+  ]);
 
-  // Configura o elemento #cristal
-  setupCristal();
+  configurarElemento('xp', 'preço-xp', [
+    { quantidade: '64X', preco: 20 },
+    { quantidade: '32X', preco: 10 },
+    { quantidade: '18X', preco: 5 },
+    { quantidade: '9X', preco: 3 }
+  ]);
+
+  configurarElemento('Cdourada', 'preço-Cdourada', [
+    { quantidade: '64X', preco: 18 },
+    { quantidade: '32X', preco: 9 },
+    { quantidade: '18X', preco: 4 },
+    { quantidade: '9X', preco: 2 }
+  ]);
+
+  configurarElemento('maçaD', 'preço-maçaD', [
+    { quantidade: '64X', preco: 22 },
+    { quantidade: '32X', preco: 11 },
+    { quantidade: '18X', preco: 6 },
+    { quantidade: '9X', preco: 3 }
+  ]);
 });
 
