@@ -13,17 +13,17 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   const usuario = document.getElementById('user').value;
   const senha = document.getElementById('senha').value;
 
-  if (usuario === 'Kaua' && senha === 'Lipskk') {
-      window.location.href = 'Loja.html'; //!REVER OS CAMINHOS DE CADA ITEM
-  } else if (usuario === 'Kevin' && senha === 'kevin102030') {
-      window.location.href = 'Loja.html'; //!REVER OS CAMINHOS DE CADA ITEM
-  } else if (usuario === 'Eduardo' && senha === '1109') {
-      window.location.href = 'Loja.html'; //!REVER OS CAMINHOS DE CADA ITEM
-  } else if (usuario === 'João' && senha === 'jpgraciano2701') {
-      window.location.href = 'Loja.html'; //!REVER OS CAMINHOS DE CADA ITEM
-  } else if (usuario === 'Andre' && senha === 'DodôTop') {
-    window.location.href = 'Loja.html' ; //!REVER OS CAMINHOS DE CADA ITEM
+  const usuarios = {
+    'Kaua': 'Lipskk',
+    'Kevin': 'kevin102030',
+    'Eduardo': '1109',
+    'João': 'jpgraciano2701',
+    'Andre': 'DodôTop'
+  };
+
+  if (usuario in usuarios && usuarios[usuario] === senha) {
+    window.location.href = `Loja.html?usuario=${usuario}`;
   } else {
-      alert('Credenciais inválidas. Tente novamente.');
+    alert('Credenciais inválidas. Tente novamente.');
   }
 });

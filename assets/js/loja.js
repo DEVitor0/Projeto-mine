@@ -1,9 +1,9 @@
 const hamburgerBtn = document.getElementById('hamburger-btn');
 const menuList = document.querySelector('.menu-list');
 
-hamburgerBtn.addEventListener('click', function() {
-  this.classList.toggle('active'); 
-  menuList.classList.toggle('active'); 
+hamburgerBtn.addEventListener('click', function () {
+  this.classList.toggle('active');
+  menuList.classList.toggle('active');
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -52,10 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
     precoElemento.textContent = novoPreco;
   }
 });
-
-function deslogado() {
-  window.alert('atualmente você está desconectado de sua conta. Conecte-se para efetuar a compra')
-}
 
 //acima é vikthpo e para baixo é a loja do kevin
 
@@ -278,3 +274,38 @@ document.addEventListener('DOMContentLoaded', function () {
   ]);
 });
 
+//Login do usuario
+
+document.addEventListener('DOMContentLoaded', function () {
+  const params = new URLSearchParams(window.location.search);
+  const usuario = params.get('usuario');
+
+  if (usuario) {
+    const boasVindasDiv = document.getElementById('boas-vindas');
+    const paragrafo = boasVindasDiv.querySelector('p');
+    paragrafo.innerText = `Seja bem-vindo, ${usuario}!`;
+
+    const saldoElement = document.getElementById('saldo');
+    saldoElement.style.display = 'flex';
+
+    const saldos = {
+      'Kaua': 20, 
+      'Kevin': 20, 
+      'Eduardo': 20, 
+      'João': 20, 
+      'Andre': 20
+    };
+
+    const saldoDoJogador = saldos[usuario];
+
+    const saldoParagrafo = document.getElementById('saldoJogador');
+    saldoParagrafo.innerText = `$${saldoDoJogador}`;
+  }
+});
+
+window.document.addEventListener('DOMContentLoaded', function () {
+  const botão = window.document.querySelector('.botão');
+  botão.addEventListener('click', function () {
+    window.alert('Atualmente você se encontra desconectado. Conecte-se para efetuar compras')
+  })
+})

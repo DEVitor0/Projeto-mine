@@ -157,6 +157,23 @@ body > nav > ul > li:nth-child(3) {
   padding-left: 5px;
 }
 
+#saldo {
+  display: none;
+  margin: 10px 0px 5px 15px;
+  align-items: center;
+}
+
+#saldo > span {
+  display: inline-block;
+  font-size: 35px;
+}
+
+#saldo > p {
+  display: inline-block;
+  font-size: 24px;
+  padding-left: 10px;
+  transform: translateY(1px);
+}
 
 #promoção-mensal {
   padding: 20px;
