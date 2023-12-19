@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
     { id: 'lapis', precoId: 'preço-lapis', precos: { 64: '$24', 32: '$12', 18: '$6', 9: '$4' } },
     { id: 'diamante', precoId: 'preço-diamante', precos: { 64: '$70', 32: '$60', 18: '$40', 9: '$28' } },
     { id: 'quartzo', precoId: 'preço-quartzo', precos: { 64: '$24', 32: '$12', 18: '$6', 9: '$4' } },
-    { id: 'netherite', precoId: 'preço-netherite', precos: { 10: '$250', 5: '$125', 2: '$75', 1: '$32' } },
   ];
 
   items.forEach(item => {
@@ -291,7 +290,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const saldos = {
       'Kaua': 20, 
       'Kevin': 20, 
-      'Eduardo': 20, 
+      'Eduardo': 2, 
       'João': 20, 
       'Andre': 20
     };
@@ -303,9 +302,42 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-window.document.addEventListener('DOMContentLoaded', function () {
-  const botão = window.document.querySelector('.botão');
-  botão.addEventListener('click', function () {
-    window.alert('Atualmente você se encontra desconectado. Conecte-se para efetuar compras')
-  })
-})
+window.addEventListener('DOMContentLoaded', function() {
+  const params = new URLSearchParams(window.location.search);
+  const usuario = params.get('usuario');
+
+  const botaoCompra = document.querySelector('.botão');
+
+  botaoCompra.addEventListener('click', function(event) {
+    const produtoSelecionado = document.getElementById('pedregulho'); 
+
+    if (!usuario) {
+      event.preventDefault(); 
+      window.alert('Atualmente você se encontra desconectado. Conecte-se para efetuar compras');
+      return;
+    }
+
+    const precoProduto = parseInt(document.getElementById('preço-pedregulho').textContent.slice(1));
+
+    const saldoSuficiente = verificarSaldoSuficiente(usuario, precoProduto);
+
+    if (!saldoSuficiente) {
+      event.preventDefault(); 
+      window.alert('Saldo insuficiente. Você não possui saldo suficiente para comprar este produto.');
+    }
+  });
+
+  function verificarSaldoSuficiente(usuario, precoProduto) {
+    const saldos = {
+      'Kaua': 20, 
+      'Kevin': 20, 
+      'Eduardo': 2, 
+      'João': 20, 
+      'Andre': 20
+    };
+
+    const saldoDoJogador = saldos[usuario];
+
+    return saldoDoJogador >= precoProduto;
+  }
+});
