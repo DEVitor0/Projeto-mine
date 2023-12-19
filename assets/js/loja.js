@@ -288,11 +288,12 @@ document.addEventListener('DOMContentLoaded', function () {
     saldoElement.style.display = 'flex';
 
     const saldos = {
-      'Kaua': 20, 
-      'Kevin': 20, 
-      'Eduardo': 2, 
-      'João': 20, 
+      'Kaua': 20,
+      'Kevin': 20,
+      'Eduardo': 2,
+      'João': 20,
       'Andre': 20
+      // Adicione os saldos dos jogadores conforme necessário
     };
 
     const saldoDoJogador = saldos[usuario];
@@ -300,44 +301,41 @@ document.addEventListener('DOMContentLoaded', function () {
     const saldoParagrafo = document.getElementById('saldoJogador');
     saldoParagrafo.innerText = `$${saldoDoJogador}`;
   }
-});
 
-window.addEventListener('DOMContentLoaded', function() {
-  const params = new URLSearchParams(window.location.search);
-  const usuario = params.get('usuario');
+  const botaoCompra = document.querySelectorAll('.botão');
 
-  const botaoCompra = document.querySelector('.botão');
+  botaoCompra.forEach(botao => {
+    botao.addEventListener('click', function (event) {
+      const produtoSelecionado = this.parentElement.querySelector('.quantidades').id;
 
-  botaoCompra.addEventListener('click', function(event) {
-    const produtoSelecionado = document.getElementById('pedregulho'); 
+      if (!usuario) {
+        event.preventDefault();
+        window.alert('Atualmente você se encontra desconectado. Conecte-se para efetuar compras');
+        return; // Encerra a função se o usuário estiver desconectado
+      }
 
-    if (!usuario) {
-      event.preventDefault(); 
-      window.alert('Atualmente você se encontra desconectado. Conecte-se para efetuar compras');
-      return;
-    }
+      const precoProduto = parseInt(this.parentElement.querySelector('.preços-personalizados').textContent.slice(1));
 
-    const precoProduto = parseInt(document.getElementById('preço-pedregulho').textContent.slice(1));
+      const saldoDoJogador = obterSaldoDoJogador(usuario);
 
-    const saldoSuficiente = verificarSaldoSuficiente(usuario, precoProduto);
-
-    if (!saldoSuficiente) {
-      event.preventDefault(); 
-      window.alert('Saldo insuficiente. Você não possui saldo suficiente para comprar este produto.');
-    }
+      if (saldoDoJogador < precoProduto) {
+        event.preventDefault();
+        window.alert('Saldo insuficiente. Você não possui saldo suficiente para comprar este produto.');
+      }
+    });
   });
 
-  function verificarSaldoSuficiente(usuario, precoProduto) {
+  // Função para obter o saldo do jogador (altere conforme necessário)
+  function obterSaldoDoJogador(usuario) {
     const saldos = {
-      'Kaua': 20, 
-      'Kevin': 20, 
-      'Eduardo': 2, 
-      'João': 20, 
+      'Kaua': 20,
+      'Kevin': 20,
+      'Eduardo': 2,
+      'João': 20,
       'Andre': 20
+      // Adicione os saldos dos jogadores conforme necessário
     };
 
-    const saldoDoJogador = saldos[usuario];
-
-    return saldoDoJogador >= precoProduto;
+    return saldos[usuario] || 0; // Retorna o saldo do jogador ou 0 se não houver saldo definido
   }
 });
