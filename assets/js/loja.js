@@ -290,10 +290,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const saldos = {
       'Kaua': 20,
       'Kevin': 20,
-      'Eduardo': 2,
+      'Eduardo': 20,
       'João': 20,
-      'Andre': 20
-      // Adicione os saldos dos jogadores conforme necessário
+      'Andre': 20,
+      'Dragonov': 20,
     };
 
     const saldoDoJogador = saldos[usuario];
@@ -311,7 +311,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!usuario) {
         event.preventDefault();
         window.alert('Atualmente você se encontra desconectado. Conecte-se para efetuar compras');
-        return; // Encerra a função se o usuário estiver desconectado
+        return;
       }
 
       const precoProduto = parseInt(this.parentElement.querySelector('.preços-personalizados').textContent.slice(1));
@@ -321,21 +321,30 @@ document.addEventListener('DOMContentLoaded', function () {
       if (saldoDoJogador < precoProduto) {
         event.preventDefault();
         window.alert('Saldo insuficiente. Você não possui saldo suficiente para comprar este produto.');
+        return;
+      }
+
+      const confirmacaoCompra = window.confirm('Deseja confirmar a compra deste produto?');
+
+      if (confirmacaoCompra) {
+        const codigoAleatorio = gerarCodigoAleatorio(usuario, produtoSelecionado);
+        window.alert(`Compra efetuada com sucesso! Seu código de confirmação é: ${codigoAleatorio}`);
+      } else {
+        event.preventDefault();
       }
     });
   });
 
-  // Função para obter o saldo do jogador (altere conforme necessário)
   function obterSaldoDoJogador(usuario) {
     const saldos = {
       'Kaua': 20,
       'Kevin': 20,
-      'Eduardo': 2,
+      'Eduardo': 20,
       'João': 20,
-      'Andre': 20
-      // Adicione os saldos dos jogadores conforme necessário
+      'Andre': 20,
+      'Dragonov': 20,
     };
-
-    return saldos[usuario] || 0; // Retorna o saldo do jogador ou 0 se não houver saldo definido
+    return saldos[usuario] || 0;
   }
+
 });
