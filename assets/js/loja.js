@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const saldos = {
       'Kaua': 20,
       'Kevin': 20,
-      'Eduardo': 20,
+      'Eduardo': -30,
       'João': 20,
       'Andre': 20
     };
@@ -345,13 +345,22 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     });
+  } else {
+    const botaoCompra = document.querySelectorAll('.botão');
+
+    botaoCompra.forEach(botao => {
+      botao.addEventListener('click', function (event) {
+        event.preventDefault();
+        window.alert('Você está desconectado. Por favor, faça o login para efetuar compras');
+      });
+    });
   }
 
   function verificarSaldoSuficiente(usuario, precoProduto) {
     const saldos = {
       'Kaua': 20,
       'Kevin': 20,
-      'Eduardo': 20,
+      'Eduardo': -30,
       'João': 20,
       'Andre': 20
     };
