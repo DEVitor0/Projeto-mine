@@ -295,55 +295,57 @@ document.addEventListener('DOMContentLoaded', function () {
       'Andre': 20
     };
 
-    const saldoDoJogador = saldos[usuario];
+    let saldoDoJogador = saldos[usuario];
 
     const saldoParagrafo = document.getElementById('saldoJogador');
     saldoParagrafo.innerText = `$${saldoDoJogador}`;
-  }
-});
 
-window.addEventListener('DOMContentLoaded', function () {
-  const params = new URLSearchParams(window.location.search);
-  const usuario = params.get('usuario');
+    const botaoCompra = document.querySelectorAll('.botão');
 
-  const botaoCompra = document.querySelectorAll('.botão');
+    botaoCompra.forEach(botao => {
+      botao.addEventListener('click', function (event) {
+        const produtoSelecionado = this.parentNode.querySelector('h3').textContent;
+        const quantidade = this.parentNode.querySelector('.quantidades').textContent;
 
-  botaoCompra.forEach(botao => {
-    botao.addEventListener('click', function (event) {
-      const produtoSelecionado = this.parentNode.querySelector('h3').textContent;
-      const quantidade = this.parentNode.querySelector('.quantidades').textContent;
+        if (!usuario) {
+          event.preventDefault();
+          window.alert('Atualmente você se encontra desconectado. Conecte-se para efetuar compras');
+          return;
+        }
 
-      if (!usuario) {
-        event.preventDefault();
-        window.alert('Atualmente você se encontra desconectado. Conecte-se para efetuar compras');
-        return;
-      }
+        const precoProduto = parseInt(this.parentNode.querySelector('.preços-personalizados').textContent.slice(1));
 
-      const precoProduto = parseInt(this.parentNode.querySelector('.preços-personalizados').textContent.slice(1));
+        const saldoSuficiente = verificarSaldoSuficiente(usuario, precoProduto);
 
-      const saldoSuficiente = verificarSaldoSuficiente(usuario, precoProduto);
+        if (!saldoSuficiente || precoProduto > saldoDoJogador || saldoDoJogador <= 0) {
+          event.preventDefault();
+          if (saldoDoJogador <= 0) {
+            window.alert('Saldo insuficiente. Você não possui saldo para comprar este produto.');
+          } else {
+            window.alert('Saldo insuficiente. Você não possui saldo suficiente para comprar este produto.');
+          }
+          return;
+        }
 
-      if (!saldoSuficiente) {
-        event.preventDefault();
-        window.alert('Saldo insuficiente. Você não possui saldo suficiente para comprar este produto.');
-        return;
-      }
+        const dataHoraAtual = new Date();
+        const dia = dataHoraAtual.getDate();
+        const mes = dataHoraAtual.getMonth() + 1;
+        const hora = dataHoraAtual.getHours();
+        const minutos = dataHoraAtual.getMinutes();
 
-      const dataHoraAtual = new Date();
-      const dia = dataHoraAtual.getDate();
-      const mes = dataHoraAtual.getMonth() + 1; // +1 pois Janeiro é 0
-      const hora = dataHoraAtual.getHours();
-      const minutos = dataHoraAtual.getMinutes();
+        const confirmacaoCompra = `Você deseja comprar ${quantidade} de ${produtoSelecionado}?`;
 
-      const confirmacaoCompra = `Você deseja comprar ${quantidade} de ${produtoSelecionado}?`;
+        const confirmacao = window.confirm(confirmacaoCompra);
 
-      const confirmacao = window.confirm(confirmacaoCompra);
-
-      if (confirmacao) {
-        window.alert(`Parabéns! Você comprou ${quantidade} de ${produtoSelecionado} às ${hora}:${minutos} do dia ${dia}/${mes} `);
-      }
+        if (confirmacao) {
+          const novoSaldo = saldoDoJogador - precoProduto;
+          saldoParagrafo.innerText = `$${novoSaldo}`;
+          window.alert(`Parabéns! Você comprou ${quantidade} de ${produtoSelecionado} às ${hora}:${minutos} do dia ${dia}/${mes} por ${precoProduto} pontos. Seu novo saldo é: ${novoSaldo} pontos`);
+          saldoDoJogador = novoSaldo;
+        }
+      });
     });
-  });
+  }
 
   function verificarSaldoSuficiente(usuario, precoProduto) {
     const saldos = {
