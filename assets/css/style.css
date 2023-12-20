@@ -214,31 +214,32 @@ h1 {
 }
 
 .linhas:first-child {
-  width: 190px; 
+  width: 20px;
+  margin-right: 160px;
 }
 
 .linhas:nth-child(2) {
-  width: 180px;
+  width: 20px;
+  margin-right: 130px;
 }
 
 .linhas:nth-child(3) {
-  width: 90px;
-  margin-right: 100px;
+  width: 20px;
+  margin-right: 150px;
 }
 
 .linhas:nth-child(4) {
-  width: 48px;
-  margin-right: 100px;
+  width: 20px;
+  margin-right: 150px;
 }
 
 .linhas:nth-child(5) {
-  width: 23px;
+  width: 0px;
   margin-right: 180px;
 }
 
-
-#pontuação > li{
-  margin-bottom: 7px;
+#pontuação > li:nth-child(1), #pontuação > li:nth-child(2), #pontuação > li:nth-child(3), #pontuação > li:nth-child(4), #pontuação > li:nth-child(5) {
+  margin-bottom: 5px;
 }
 
 .texto-pontos {
@@ -285,22 +286,27 @@ h1 {
 
 #caixa2 > div.graficos > div:nth-child(1) {
   background: linear-gradient(to right, #C17DFB 0%, #8B52E1 67%);
+  width: 100px;
 }
 
 #caixa2 > div.graficos > div:nth-child(2) {
   background: linear-gradient(to right, #C17DFB 0%, #8B52E1 67%);
+  width: 80px;
 }
 
 #caixa2 > div.graficos > div:nth-child(3) {
   background: linear-gradient(to right, #C17DFB 0%, #8B52E1 67%);
+  width: 56px;
 }
 
 #caixa2 > div.graficos > div:nth-child(4) {
   background: linear-gradient(to right, #C17DFB 0%, #8B52E1 67%);
+  width: 34px;
 }
 
 #caixa2 > div.graficos > div:nth-child(5) {
   background: linear-gradient(to right, #C17DFB 0%, #8B52E1 67%);
+  width: 13px;
 }
 
 #texto-horas {
@@ -435,7 +441,7 @@ th, td {
 #regras .contorno-bloco {
   background-color: var(--cor-blocos);
   color: white;
-  border: 2px solid var(--cor-risco);
+  border: 2px solid white;
   border-radius: 50%;
   width: 40px;
   height: 40px;
