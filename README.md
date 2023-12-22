@@ -26,9 +26,9 @@ Para testar as funcionalidades, você pode usar as seguintes credenciais de test
 - **Senha:** Lipskk
 
 ## Tecnologias Utilizadas
-<img src="https://img.icons8.com/color/48/000000/html-5.png"/> HTML
-<img src="https://img.icons8.com/color/48/000000/css3.png"/> CSS
-<img src="https://img.icons8.com/color/48/000000/javascript.png"/> JavaScript
+- <img src="https://img.icons8.com/color/48/000000/html-5.png"/> HTML
+- <img src="https://img.icons8.com/color/48/000000/css3.png"/> CSS
+- <img src="https://img.icons8.com/color/48/000000/javascript.png"/> JavaScript
 
 ## Contribuindo
 
@@ -42,7 +42,3 @@ Se você quiser contribuir com este projeto, siga estas etapas:
 ## Autor
 
 Vitor Moreira
-
-## Licença
-
-Este projeto está licenciado sob a [Nome da Licença] - veja o arquivo [LICENSE.md](LICENSE.md) para mais detalhes.
