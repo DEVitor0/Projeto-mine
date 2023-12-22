@@ -11,7 +11,7 @@ Este site foi desenvolvido exclusivamente para a versão mobile. Não está otim
 
 ### Link do Projeto:
 
-- [Projeto Mine](https://github.com/DEVitor0/Projeto-mine)
+- [Projeto Mine](https://devitor0.github.io/Projeto-mine/)
 
 ## Funcionalidades Principais
 
@@ -26,9 +26,9 @@ Para testar as funcionalidades, você pode usar as seguintes credenciais de test
 - **Senha:** Lipskk
 
 ## Tecnologias Utilizadas
-- <img src="https://img.icons8.com/color/48/000000/html-5.png"/> HTML
-- <img src="https://img.icons8.com/color/48/000000/css3.png"/> CSS
-- <img src="https://img.icons8.com/color/48/000000/javascript.png"/> JavaScript
+<img src="https://img.icons8.com/color/48/000000/html-5.png"/> HTML
+<img src="https://img.icons8.com/color/48/000000/css3.png"/> CSS
+<img src="https://img.icons8.com/color/48/000000/javascript.png"/> JavaScript
 
 ## Contribuindo
 
