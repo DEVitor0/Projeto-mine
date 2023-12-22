@@ -360,7 +360,7 @@ table {
   border-collapse: collapse;
   background-color: #353434;
   color: white;
-  border: 1px solid rgb(39, 36, 36);
+  border: 1px solid white;
   border-radius: 5px;
   overflow-x: hidden;
 }
