@@ -288,11 +288,11 @@ document.addEventListener('DOMContentLoaded', function () {
     saldoElement.style.display = 'flex';
 
     const saldos = {
-      'Kaua': 20,
-      'Kevin': 20,
-      'Eduardo': -30,
-      'João': 20,
-      'Andre': 20
+      'Kaua': 270,
+      'Kevin': 310,
+      'Eduardo': 130,
+      'João': 380,
+      'Andre': 420
     };
 
     let saldoDoJogador = saldos[usuario];
@@ -358,11 +358,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function verificarSaldoSuficiente(usuario, precoProduto) {
     const saldos = {
-      'Kaua': 20,
-      'Kevin': 20,
-      'Eduardo': -30,
-      'João': 20,
-      'Andre': 20
+      'Kaua': 270,
+      'Kevin': 310,
+      'Eduardo': 130,
+      'João': 380,
+      'Andre': 420
     };
 
     const saldoDoJogador = saldos[usuario];
