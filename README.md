@@ -6,7 +6,7 @@
 
 Este projeto é um site de servidor para amigos de Minecraft, fornecendo informações sobre os jogadores, login e uma loja para compra de produtos disponíveis dentro do jogo, todos gerenciados por uma economia própria.
 
-## Atenção
+## Atenção!
 Este site foi desenvolvido exclusivamente para a versão mobile. Não está otimizado para visualização em desktops ou tablets.
 
 ### Link do Projeto:
@@ -17,11 +17,11 @@ Este site foi desenvolvido exclusivamente para a versão mobile. Não está otim
 
 - **Login de Usuário:** Os jogadores podem fazer login usando as credenciais fornecidas para acessar a loja e comprar itens.
 - **Loja de Produtos:** Disponibiliza produtos para compra, onde o jogador pode ver os produtos disponíveis, suas quantidades e preços.
-- **Atualização de Quantidades:** Antes de efetuar uma compra, o jogador pode alterar na loja a quantidade de itens na qual ele pode comprar.
+- **Atualização de Quantidades:** Antes de efetuar uma compra, o jogador pode alterar na loja a quantidade de itens na qual ele pode comprar apenas clicando no botão no canto inferior direito do item.
 - **Verificação de Saldo:** Antes de realizar uma compra, o saldo do jogador é verificado para garantir que seja suficiente para a transação.
 
 ## Acesso à Conta de Teste
-Para testar as funcionalidades, você pode usar as seguintes credenciais de teste:
+Para testar as funcionalidades da loja, é necessario com que você realize um login. Você pode usar as seguintes credenciais de teste:
 - **Usuário:** Kaua
 - **Senha:** Lipskk
 
