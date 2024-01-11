@@ -214,27 +214,27 @@ h1 {
 }
 
 .linhas:first-child {
-  width: 20px;
-  margin-right: 160px;
+  width: 180px;
+  margin-right: 10px;
 }
 
 .linhas:nth-child(2) {
-  width: 20px;
+  width: 160px;
   margin-right: 130px;
 }
 
 .linhas:nth-child(3) {
-  width: 20px;
+  width: 120px;
   margin-right: 150px;
 }
 
 .linhas:nth-child(4) {
-  width: 20px;
+  width: 80px;
   margin-right: 150px;
 }
 
 .linhas:nth-child(5) {
-  width: 0px;
+  width: 40px;
   margin-right: 180px;
 }
 
