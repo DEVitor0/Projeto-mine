@@ -1,5 +1,5 @@
 //menu hamburguer
-function executeMenu() {
+function executaMenu() {
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const menuList = document.querySelector('.menu-list');
 
@@ -8,7 +8,7 @@ function executeMenu() {
     menuList.classList.toggle('active');
   });
 }
-executeMenu()
+executaMenu()
 
 function mostrarConteudo(tipo) {
   const eventos = document.getElementById('eventos');
@@ -30,3 +30,11 @@ function mostrarConteudo(tipo) {
   }
 }
 
+function adicionarPadding() {
+  let larguraDaTela = window.innerWidth;
+
+  document.getElementById("caixa1").style.paddingBottom = larguraDaTela < 291 ? "20px" : "0";
+  document.getElementById("caixa2").style.paddingBottom = larguraDaTela < 288 ? "10px" : "0";
+}
+window.onload = adicionarPadding;
+window.onresize = adicionarPadding;
