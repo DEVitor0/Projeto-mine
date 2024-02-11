@@ -1,5 +1,5 @@
 //menu hamburguer
-function executeMenu() {
+function executaMenu() {
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const menuList = document.querySelector('.menu-list');
 
@@ -8,7 +8,18 @@ function executeMenu() {
     menuList.classList.toggle('active');
   });
 }
-executeMenu()
+executaMenu()
+
+function aumentaLargura() {
+  const campo = document.querySelector(".campo");
+  const campo2 = document.querySelector("#loginForm > div:nth-child(2)");
+  campo.style.width = window.innerWidth < 338 ? "85%" : "80%";
+  campo2.style.width = window.innerWidth < 338 ? "85%" : "80%";
+
+  campo.style.width = window.innerWidth <= 317 && window.innerWidth >= 280 ? "90%" : "85%";
+  campo2.style.width = window.innerWidth <= 317 && window.innerWidth >= 280 ? "90%" : "85%";
+}
+aumentaLargura()
 
 document.getElementById('loginForm').addEventListener('submit', function(event) {
   event.preventDefault();
