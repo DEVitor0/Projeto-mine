@@ -208,7 +208,7 @@ h1 {
 }
 
 #caixa1 > .graficos {
-  width: 40%;
+  width: 53%;
 }
 
 .graficos > .linhas{
@@ -216,7 +216,26 @@ h1 {
   margin-bottom: 3px;
   height: 20px; 
   background: linear-gradient(to right, #465796, #5F7ADA 60%);
-  margin-right: 10px; 
+}
+
+#caixa1 > .graficos > .linhas:first-child {
+  width: 83%;
+}
+
+#caixa1 > .graficos > .linhas:nth-child(2) {
+  width: 76%;
+}
+
+#caixa1 > div.graficos > div:nth-child(3) {
+  width: 62%;
+}
+
+#caixa1 > .graficos > .linhas:nth-child(4) {
+  width: 56%;
+}
+
+#caixa1 > .graficos > .linhas:last-child {
+  width: 32%;
 }
 
 #pontuação > li:nth-child(1), #pontuação > li:nth-child(2), #pontuação > li:nth-child(3), #pontuação > li:nth-child(4), #pontuação > li:nth-child(5) {
