@@ -35,6 +35,7 @@ function adicionarPadding() {
 
   document.getElementById("caixa1").style.paddingBottom = larguraDaTela < 291 ? "20px" : "0";
   document.getElementById("caixa2").style.paddingBottom = larguraDaTela < 288 ? "10px" : "0";
+  document.querySelector(".titulo2").style.height = larguraDaTela < 278 ? "90px" : "fitContent";
 }
 window.onload = adicionarPadding;
 window.onresize = adicionarPadding;

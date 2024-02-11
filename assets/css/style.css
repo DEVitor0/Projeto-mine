@@ -151,10 +151,14 @@ header {
 
 .titulo2 {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-start;
   overflow-y: hidden;
-  height: 100%;
+  height: fit-content;
+}
+
+#sobre-server > div.titulo2 > h2{
+  padding-left: 5px;
 }
 
 .contorno-bloco {
@@ -364,8 +368,18 @@ h1 {
 }
 
 .titulo {
-  transform: translateY(20px);
   margin-left: 2px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#eventos > div > h2 {
+  padding-left: 4px;
+}
+
+#noticias > div.titulo > h2 {
+  padding-left: 4px;
 }
 
 table {
@@ -448,8 +462,6 @@ th, td {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
-  position: relative;
-  left: 30px;
 }
 
 #regras .contorno-bloco {
@@ -462,18 +474,18 @@ th, td {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 15px;
+  margin-right: 5px;
   font-size: 24px;
+}
+
+#regras > div.titulo {
+  transform: translateX(-18px);
 }
 
 #regras h2 {
   font-size: 24px;
   margin: 0;
   color: white;
-}
-
-#regras > div.titulo > h2 {
-  transform: translateY(-10px);
 }
 
 #regras #tabela-regras div {
