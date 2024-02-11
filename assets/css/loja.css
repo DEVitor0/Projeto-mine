@@ -142,18 +142,21 @@ body > nav > ul > li:nth-child(3) {
 
 #boas-vindas {
   margin: 10px 0px 5px 10px;
+  display: flex;
+  align-items: center;
 }
 
 #boas-vindas > span {
+  min-width: 40px;
   font-size: 40px;
   border: 3px solid white;
   border-radius: 100%;
+  overflow: hidden;
 }
 
 #boas-vindas > p {
   display: inline-block;
   font-size: 18px;
-  transform: translateY(-17px);
   padding-left: 5px;
 }
 
