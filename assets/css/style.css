@@ -142,19 +142,31 @@ body > nav > ul > li:nth-child(3) {
 }
 
 header {
-  margin-top: 15px;
-  height: 5vh;
+  margin-top: 10px;
+  height: 60px;
   overflow-y: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.titulo2 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  overflow-y: hidden;
+  height: 100%;
 }
 
 .contorno-bloco {
-  width: fit-content;
+  min-width: 36px;
+  max-width: 36px;
   background-color: var(--cor-blocos);
   border-radius: 5px;
   margin-left: 5px;
   margin-bottom: 20px;
   display: inline-block;
   vertical-align: middle;
+  transform: translateY(10px);
 }
 
 .contorno-bloco > span {
@@ -163,9 +175,8 @@ header {
 }
 
 h1 {
-  font-size: 27px;
-  display: inline-block;
-  transform: translateY(3px)
+  font-size: 25px;
+  margin-left: 6px;
 }
 
 #caixa1{
@@ -253,6 +264,7 @@ h1 {
 #pontuação > li{
   margin-bottom: 7px;
   text-align: justify;
+  padding-right: 6px;
 }
 
 #caixa2 {
