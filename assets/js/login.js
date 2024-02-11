@@ -1,11 +1,14 @@
 //menu hamburguer
-const hamburgerBtn = document.getElementById('hamburger-btn');
-const menuList = document.querySelector('.menu-list');
+function executeMenu() {
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const menuList = document.querySelector('.menu-list');
 
-hamburgerBtn.addEventListener('click', function() {
-  this.classList.toggle('active'); 
-  menuList.classList.toggle('active'); 
-});
+  hamburgerBtn.addEventListener('click', function () {
+    this.classList.toggle('active');
+    menuList.classList.toggle('active');
+  });
+}
+executeMenu()
 
 document.getElementById('loginForm').addEventListener('submit', function(event) {
   event.preventDefault();

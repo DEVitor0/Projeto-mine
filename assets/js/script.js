@@ -1,12 +1,14 @@
 //menu hamburguer
-const hamburgerBtn = document.getElementById('hamburger-btn');
-const menuList = document.querySelector('.menu-list');
+function executeMenu() {
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const menuList = document.querySelector('.menu-list');
 
-hamburgerBtn.addEventListener('click', function() {
-  this.classList.toggle('active'); // Adicionar ou remover a classe 'active' ao botão
-  menuList.classList.toggle('active'); // Adicionar ou remover a classe 'active' ao menu
-});
-
+  hamburgerBtn.addEventListener('click', function () {
+    this.classList.toggle('active');
+    menuList.classList.toggle('active');
+  });
+}
+executeMenu()
 
 function mostrarConteudo(tipo) {
   const eventos = document.getElementById('eventos');
