@@ -261,14 +261,8 @@ h1 {
   display: flex;
   justify-content: flex-end;
   position: relative;
-  top: -13.5vh;
+  top: -64%;
   padding-right: 10px;
-}
-
-#pontuação > li{
-  margin-bottom: 7px;
-  text-align: justify;
-  padding-right: 6px;
 }
 
 #caixa2 {
