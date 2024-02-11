@@ -202,40 +202,17 @@ h1 {
   display: inline-block;
   vertical-align: middle;
   height: 117px;
+  width: 100px;
   position: absolute;
   overflow-y: hidden;
 }
 
 .graficos > .linhas{
-  display: inline-block; 
+  display: block;
+  margin-bottom: 3px;
   height: 20px; 
   background: linear-gradient(to right, #465796, #5F7ADA 60%);
   margin-right: 10px; 
-}
-
-.linhas:first-child {
-  width: 180px;
-  margin-right: 10px;
-}
-
-.linhas:nth-child(2) {
-  width: 160px;
-  margin-right: 130px;
-}
-
-.linhas:nth-child(3) {
-  width: 120px;
-  margin-right: 150px;
-}
-
-.linhas:nth-child(4) {
-  width: 80px;
-  margin-right: 150px;
-}
-
-.linhas:nth-child(5) {
-  width: 40px;
-  margin-right: 180px;
 }
 
 #pontuação > li:nth-child(1), #pontuação > li:nth-child(2), #pontuação > li:nth-child(3), #pontuação > li:nth-child(4), #pontuação > li:nth-child(5) {
@@ -255,13 +232,13 @@ h1 {
 
 #caixa2 {
   width: 96%;
-  height: fit-content;
+  height: 194px;
   margin: auto;
   background-color: var(--cor-blocos);
   border-radius: 10px;
   margin-top: 7px;
   margin-bottom: 1px;
-  padding-bottom: 10px;
+  overflow-y: hidden;
 }
 
 #caixa2 > h2 {
@@ -310,10 +287,10 @@ h1 {
 }
 
 #texto-horas {
-  display: inline-block;
-  position: absolute;
-  left: calc(320px - 2vw);
-  text-align: justify;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: -62%;
 }
 
 #texto-horas > ul > li {
