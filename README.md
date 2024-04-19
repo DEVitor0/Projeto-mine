@@ -4,7 +4,7 @@
 
 ## Descrição
 
-Este projeto é um site de servidor para amigos de Minecraft, fornecendo informações sobre os jogadores, login e uma loja para compra de produtos disponíveis dentro do jogo, todos gerenciados por uma economia própria.
+Este projeto é um site de servidor para amigos de Minecraft. Ele tem o intuito de fornecer informações sobre os jogadores e realizar um login para efetuar compras na loja.
 
 ## Atenção!
 Este site foi desenvolvido exclusivamente para a versão mobile. Não está otimizado para visualização em desktops ou tablets.
